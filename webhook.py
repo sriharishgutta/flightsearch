@@ -10,6 +10,8 @@ access_token = responseText['result']
 
 url = "https://platform.uipath.com/odata/Jobs/UiPath.Server.Configuration.OData.StartJobs"
 
-header = {"Content-Type": "application/json","Authorization":access_token}
+header = {'Content-Type': 'application/json' , 'Authorization' : "Bearer " + access_token}
+
 payload = {"startInfo":{"RobotIds":[6996],"ReleaseKey":"e70e3034-05f0-43bd-a101-f045f80bc1a7","Strategy":"Specific","NoOfRobots":1,"Source":"Manual"}}
 response = requests.request("POST", url, data=payload, headers=header)
+print response.text
