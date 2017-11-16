@@ -1,5 +1,5 @@
 import requests
-import JSON
+import json
 
 url = "https://platform.uipath.com/api/Account/Authenticate"
 payload = {"TenancyName":"sriharishtenancy","UsernameOrEmailAddress":"sriharish.gutta@accenture.com","Password":"Harish613"}
